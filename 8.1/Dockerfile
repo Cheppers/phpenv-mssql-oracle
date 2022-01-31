@@ -16,7 +16,8 @@ ENV LD_LIBRARY_PATH="/usr/local/instantclient"
 RUN unzip /build/instantclient-basic-linux.x64-12.2.0.1.0.zip -d /usr/local/ && \
     unzip /build/instantclient-sqlplus-linux.x64-12.2.0.1.0.zip -d /usr/local/ && \
     unzip /build/instantclient-sdk-linux.x64-12.2.0.1.0.zip -d /usr/local/ && \
-    ln -s /usr/local/instantclient_21_5 /usr/local/instantclient && \
+    ln -s /usr/local/instantclient_12_2 /usr/local/instantclient && \
+    ln -s /usr/local/instantclient/libclntsh.so.12.1 /usr/local/instantclient/libclntsh.so && \
     ln -s /usr/local/instantclient/sqlplus /usr/bin/sqlplus && \
     rm -rf /build && \
     apt-get update && \
